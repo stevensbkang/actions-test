@@ -10,6 +10,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y musl-tools
+          sudo df -h
           # Install musl cross-compilers from musl.cc          
           wget -q https://musl.cc/aarch64-linux-musl-cross.tgz -O /tmp/aarch64-musl.tgz
           ls /tmp
