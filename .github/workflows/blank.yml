@@ -11,8 +11,10 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y musl-tools
           # Install musl cross-compilers from musl.cc          
-          sudo wget -q https://musl.cc/aarch64-linux-musl-cross.tgz -O /tmp/aarch64-musl.tgz
-          sudo wget -q https://musl.cc/x86_64-linux-musl-cross.tgz -O /tmp/x86_64-musl.tgz
-          sudo cd /opt && tar -xzf /tmp/aarch64-musl.tgz && tar -xzf /tmp/x86_64-musl.tgz
+          wget -q https://musl.cc/aarch64-linux-musl-cross.tgz -O /tmp/aarch64-musl.tgz
+          ls /tmp
+          wget -q https://musl.cc/x86_64-linux-musl-cross.tgz -O /tmp/x86_64-musl.tgz
+          ls /tmp
+          cd /opt && sudo tar -xzf /tmp/aarch64-musl.tgz && sudo tar -xzf /tmp/x86_64-musl.tgz
           sudo ln -sf /opt/aarch64-linux-musl-cross/bin/aarch64-linux-musl-gcc /usr/local/bin/aarch64-linux-musl-gcc
           sudo ln -sf /opt/x86_64-linux-musl-cross/bin/x86_64-linux-musl-gcc /usr/local/bin/x86_64-linux-musl-gcc
