@@ -16,9 +16,9 @@ jobs:
           sudo df -h
           # Install musl cross-compilers from musl.cc          
           curl -I https://musl.cc/aarch64-linux-musl-cross.tgz
-          wget -v -o /tmp/aarch64-musl.tgz https://more.musl.cc/x86_64-linux-musl/aarch64-linux-musl-cross.tgz
+          wget -v -o /tmp/aarch64-musl.tgz https://kubesolo-io-assets.sfo3.cdn.digitaloceanspaces.com/musl/aarch64-linux-musl-cross.tgz
           ls /tmp
-          wget -q https://more.musl.cc/x86_64-linux-musl/x86_64-linux-musl-cross.tgz -O /tmp/x86_64-musl.tgz
+          wget -q https://kubesolo-io-assets.sfo3.cdn.digitaloceanspaces.com/musl/x86_64-linux-musl-cross.tgz -O /tmp/x86_64-musl.tgz
           ls /tmp
           cd /opt && sudo tar -xzf /tmp/aarch64-musl.tgz && sudo tar -xzf /tmp/x86_64-musl.tgz
           sudo ln -sf /opt/aarch64-linux-musl-cross/bin/aarch64-linux-musl-gcc /usr/local/bin/aarch64-linux-musl-gcc
