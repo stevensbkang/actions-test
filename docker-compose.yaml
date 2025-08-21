@@ -1,3 +1,5 @@
 services:
   gitops-update-automation-test-webhook:
     image: mcr.microsoft.com/windows/servercore/iis:windowsservercore-ltsc2025
+    ports:
+      - 80:80
